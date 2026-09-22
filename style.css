@@ -672,3 +672,507 @@ a {
 
    cursor: pointer;
 }
+
+/* =====================================
+   АДАПТИВ ДЛЯ ПЛАНШЕТОВ И ТЕЛЕФОНОВ
+===================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Сначала исправляем контейнеры */
+[class*="_container"] {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 40px;
+}
+
+
+/* =====================================
+   ПЛАНШЕТ
+===================================== */
+
+@media (max-width: 1000px) {
+
+    [class*="_container"] {
+        padding-inline: 30px;
+    }
+
+    /* HEADER */
+
+    .header_list {
+        gap: 20px;
+    }
+
+    .button_list {
+        gap: 15px;
+    }
+
+
+    /* HERO */
+
+    .hero_content {
+        max-width: 55%;
+    }
+
+    .hero_title,
+    .hero_title span {
+        font-size: 48px;
+    }
+
+    .hero_images {
+        width: 40%;
+    }
+
+
+    /* COMMUNITY */
+
+    .information_manages {
+        gap: 30px;
+    }
+
+
+    /* FEATURES */
+
+    .feature {
+        gap: 30px;
+    }
+
+    .features_image {
+        width: 45%;
+        padding-right: 0;
+    }
+
+
+    /* TESTIMONIAL */
+
+    .testimonial {
+        width: calc(100% - 60px);
+        gap: 30px;
+    }
+
+    .testimonial-image {
+        width: 320px;
+        height: 320px;
+    }
+
+
+    /* BLOG */
+
+    .blog {
+        width: calc(100% - 60px);
+    }
+
+    .blog-description {
+        width: 80%;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 50px 40px;
+        gap: 30px;
+    }
+}
+
+
+/* =====================================
+   ТЕЛЕФОН
+===================================== */
+
+@media (max-width: 768px) {
+
+    [class*="_container"] {
+        padding-inline: 20px;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header {
+        position: relative;
+        padding-block: 20px;
+    }
+
+    .header_nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .header_list {
+        order: 3;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        gap: 25px;
+
+        padding-bottom: 10px;
+    }
+
+    .header_list-link {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    .button_list {
+        gap: 15px;
+    }
+
+    .header_button {
+        font-size: 13px;
+    }
+
+    .header_button.reg {
+        padding: 8px 12px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero_content {
+        max-width: 100%;
+        padding-block: 30px;
+        text-align: center;
+    }
+
+    .hero_title,
+    .hero_title span {
+        font-size: 40px;
+        line-height: 1.15;
+    }
+
+    .hero_title span {
+        display: block;
+    }
+
+    .hero_desc {
+        line-height: 24px;
+    }
+
+    .hero_buttons {
+        justify-content: center;
+    }
+
+    .hero_images {
+        position: static;
+
+        width: 80%;
+        max-width: 350px;
+
+        padding: 0;
+
+        margin: 20px auto;
+    }
+
+
+    /* ================= CLIENTS ================= */
+
+    .comp_clients {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .companies_list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+
+    /* ================= COMMUNITY ================= */
+
+    .community_title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .community_title span {
+        display: block;
+    }
+
+    .community_desc {
+        text-align: center;
+    }
+
+    .information_manages {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* ================= FEATURES ================= */
+
+    .feature {
+        flex-direction: column;
+        gap: 25px;
+
+        padding-block: 30px;
+    }
+
+    .features_image {
+        width: 80%;
+        max-width: 400px;
+
+        padding-right: 0;
+    }
+
+    .feature_content {
+        width: 100%;
+    }
+
+    .feature_title {
+        font-size: 30px;
+    }
+
+    .feature_desc {
+        font-size: 14px;
+    }
+
+    /*
+       У тебя в HTML много <br>.
+       На телефоне они мешают тексту нормально переноситься.
+    */
+
+    .feature_content br {
+        display: none;
+    }
+
+
+    /* ================= STATS ================= */
+
+    .stats-section {
+        flex-direction: column;
+
+        padding: 50px 20px;
+
+        gap: 30px;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 32px;
+    }
+
+    .text p {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .stats {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .stat img {
+        width: 40px;
+    }
+
+    .stat h2 {
+        font-size: 18px;
+    }
+
+
+    /* ================= TESTIMONIAL ================= */
+
+    .testimonial {
+        width: 100%;
+
+        margin: 30px 0;
+
+        padding: 30px 20px;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .testimonial-image {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .testimonial-text {
+        font-size: 15px;
+    }
+
+    .testimonial-content h2 {
+        font-size: 21px;
+    }
+
+    .company {
+        font-size: 15px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logos {
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .logos img {
+        width: 40px;
+    }
+
+
+    /* ================= BLOG ================= */
+
+    .blog {
+        width: 100%;
+
+        margin: 40px auto;
+
+        padding-inline: 20px;
+    }
+
+    .blog h1 {
+        font-size: 30px;
+    }
+
+    .blog-description {
+        width: 100%;
+
+        font-size: 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card > img {
+        height: 280px;
+    }
+
+    .card-content {
+        width: 90%;
+    }
+
+    .card-content h2 {
+        font-size: 18px;
+    }
+
+    .card-content h2 br {
+        display: none;
+    }
+
+
+    /* ================= DEMO ================= */
+
+    .demo-section {
+        padding: 40px 20px;
+    }
+
+    .demo-section h1 {
+        font-size: 36px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+        flex-direction: column;
+
+        padding: 45px 25px;
+
+        gap: 40px;
+    }
+
+    .footer-info,
+    .footer-email {
+        width: 100%;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* =====================================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+===================================== */
+
+@media (max-width: 480px) {
+
+    .hero_title,
+    .hero_title span {
+        font-size: 34px;
+    }
+
+    .hero_images {
+        width: 90%;
+    }
+
+    .community_title {
+        font-size: 27px;
+    }
+
+    .feature_title {
+        font-size: 27px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        height: auto;
+    }
+
+    .testimonial-image {
+        height: 250px;
+    }
+
+    .blog h1 {
+        font-size: 28px;
+    }
+
+    .card > img {
+        height: 230px;
+    }
+
+    .demo-section h1 {
+        font-size: 31px;
+    }
+
+    .demo-section h1 br {
+        display: none;
+    }
+}
